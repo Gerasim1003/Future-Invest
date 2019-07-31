@@ -13,6 +13,10 @@
 		05E7A5A922F1700600941573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E7A5A822F1700600941573 /* Assets.xcassets */; };
 		05E7A5AC22F1700600941573 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E7A5AA22F1700600941573 /* LaunchScreen.storyboard */; };
 		05E7A5B722F173B500941573 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5B622F173B500941573 /* TextField.swift */; };
+		05E7A5B922F1956700941573 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5B822F1956700941573 /* AddCardViewController.swift */; };
+		05E7A5BB22F1B07000941573 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5BA22F1B07000941573 /* Goal.swift */; };
+		05E7A5BD22F1B19E00941573 /* GoalsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5BC22F1B19E00941573 /* GoalsCollectionViewCell.swift */; };
+		05E7A5BF22F1B1B800941573 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5BE22F1B1B800941573 /* GoalsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		05E7A5AB22F1700600941573 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05E7A5AD22F1700600941573 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05E7A5B622F173B500941573 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		05E7A5B822F1956700941573 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
+		05E7A5BA22F1B07000941573 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		05E7A5BC22F1B19E00941573 /* GoalsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsCollectionViewCell.swift; sourceTree = "<group>"; };
+		05E7A5BE22F1B1B800941573 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +68,6 @@
 				05E7A5B422F1735D00941573 /* View */,
 				05E7A5B522F1736400941573 /* Controller */,
 				05E7A5A122F1700200941573 /* AppDelegate.swift */,
-				05E7A5A322F1700200941573 /* ViewController.swift */,
 				05E7A5A522F1700200941573 /* Main.storyboard */,
 				05E7A5A822F1700600941573 /* Assets.xcassets */,
 				05E7A5AA22F1700600941573 /* LaunchScreen.storyboard */,
@@ -72,6 +79,7 @@
 		05E7A5B322F1734E00941573 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				05E7A5BA22F1B07000941573 /* Goal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -80,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				05E7A5B622F173B500941573 /* TextField.swift */,
+				05E7A5BC22F1B19E00941573 /* GoalsCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -87,6 +96,9 @@
 		05E7A5B522F1736400941573 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				05E7A5A322F1700200941573 /* ViewController.swift */,
+				05E7A5B822F1956700941573 /* AddCardViewController.swift */,
+				05E7A5BE22F1B1B800941573 /* GoalsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -162,8 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E7A5BF22F1B1B800941573 /* GoalsViewController.swift in Sources */,
+				05E7A5B922F1956700941573 /* AddCardViewController.swift in Sources */,
+				05E7A5BD22F1B19E00941573 /* GoalsCollectionViewCell.swift in Sources */,
 				05E7A5B722F173B500941573 /* TextField.swift in Sources */,
 				05E7A5A422F1700200941573 /* ViewController.swift in Sources */,
+				05E7A5BB22F1B07000941573 /* Goal.swift in Sources */,
 				05E7A5A222F1700200941573 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
