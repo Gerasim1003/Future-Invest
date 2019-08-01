@@ -1,30 +1,30 @@
 //
-//  AddCardViewController.swift
+//  SignUpViewController.swift
 //  Future Invest
 //
-//  Created by Gerasim Israyelyan on 7/31/19.
+//  Created by Gerasim Israyelyan on 8/1/19.
 //  Copyright © 2019 Gerasim Israyelyan. All rights reserved.
 //
 
 import UIKit
 
-class AddCardViewController: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var cardNameTextField: TextField!
-    @IBOutlet weak var cardNumberTextField: TextField!
-    @IBOutlet weak var dateTextField: TextField!
-    @IBOutlet weak var CVVTextField: TextField!
+class SignUpViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var usernameLabel: TextField!
+    @IBOutlet weak var emailLabel: TextField!
+    @IBOutlet weak var passwordLabel: TextField!
+    @IBOutlet weak var confirmPasswordLabel: TextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
-        cardNameTextField.delegate = self
-        cardNumberTextField.delegate = self
-        dateTextField.delegate = self
-        CVVTextField.delegate = self
 
+        // Do any additional setup after loading the view.
+        usernameLabel.delegate = self
+        emailLabel.delegate = self
+        passwordLabel.delegate = self
+        confirmPasswordLabel.delegate = self
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -36,30 +36,27 @@ class AddCardViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        if self.view.frame.origin.y != 0 {
+        if self.view.frame.origin.y != 0{
             self.view.frame.origin.y = 0
         }
     }
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         switch textField.tag {
         case 0:
-            textField.resignFirstResponder()
-            cardNumberTextField.becomeFirstResponder()
+            emailLabel.becomeFirstResponder()
         case 1:
-            textField.resignFirstResponder()
-            dateTextField.becomeFirstResponder()
+            passwordLabel.becomeFirstResponder()
         case 2:
-            textField.resignFirstResponder()
-            CVVTextField.becomeFirstResponder()
-        case 3:
-            textField.resignFirstResponder()
+            confirmPasswordLabel.becomeFirstResponder()
         default:
             break
         }
         
         return true
     }
+    
 
     /*
     // MARK: - Navigation

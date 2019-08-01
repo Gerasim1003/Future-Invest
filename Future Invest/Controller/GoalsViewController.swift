@@ -18,7 +18,7 @@ class GoalsViewController: UIViewController, UICollectionViewDataSource {
         Goal(image: UIImage(named: "Asset 7-8")!, name: "Phone"),
         Goal(image: UIImage(named: "Asset 8-8")!, name: "Bicycle"),
         Goal(image: UIImage(named: "Asset 9-8")!, name: "Bike"),
-        Goal(image: UIImage(named: "Asset 9-8")!, name: "Add your"),
+        Goal(image: UIImage(named: "+")!, name: "Add your"),
     ]
     
     override func viewDidLoad() {

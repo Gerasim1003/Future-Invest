@@ -22,7 +22,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         emailTextField.delegate =  self
         passwordTextField.delegate = self
         
-        print(view.frame.width)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
