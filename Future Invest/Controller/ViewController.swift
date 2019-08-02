@@ -60,14 +60,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         queryService.postRequest(email: emailTextField.text!, password: passwordTextField.text!, method: .login, completion: { response in
             
-            switch response.statusCode {
-            case 200:
-                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "collection") as? SignUpViewController else { return }
-                let navVC = UINavigationController(rootViewController: vc)
-                self.present(navVC, animated: true, completion: nil)
-            default:
-                print("status code: \(response.statusCode)")
-            }
+                print(response)
             
         })
         

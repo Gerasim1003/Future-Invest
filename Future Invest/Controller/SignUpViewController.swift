@@ -9,7 +9,6 @@
 import UIKit
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var usernameLabel: TextField!
     @IBOutlet weak var emailLabel: TextField!
     @IBOutlet weak var passwordLabel: TextField!
     @IBOutlet weak var confirmPasswordLabel: TextField!
@@ -23,7 +22,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
         // Do any additional setup after loading the view.
-        usernameLabel.delegate = self
         emailLabel.delegate = self
         passwordLabel.delegate = self
         confirmPasswordLabel.delegate = self
@@ -63,21 +61,28 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         emailLabel.updateBorderColor()
         passwordLabel.updateBorderColor()
         confirmPasswordLabel.updateBorderColor()
-        guard !emailLabel.text!.isEmpty && !passwordLabel.text!.isEmpty && confirmPasswordLabel.text!.isEmpty else { return }
         
+        guard !emailLabel.text!.isEmpty && !passwordLabel.text!.isEmpty && !confirmPasswordLabel.text!.isEmpty else { return }
+        
+        if confirmPasswordLabel.text != passwordLabel.text {
+            let alertController = UIAlertController(title: "Password and confirm password does not match", message: nil, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
         
         queryService.postRequest(email: emailLabel.text!, password: passwordLabel.text!, method: .register, completion: { response in
-            switch response.statusCode {
-            case 200:
-                let alertController = UIAlertController(title: "Registration completed successfully", message: nil, preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
-                    //TODO: back to login page
-                }))
+            if (200..<300).contains(response.response!.statusCode) {
+                self.performSegue(withIdentifier: "signUp", sender: nil)
+            } else if response.response!.statusCode == 400 {
+                let alertController = UIAlertController(title: "This email already exists", message: nil, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
                 self.present(alertController, animated: true, completion: nil)
-            default:
-                print("status code: \(response.statusCode)")
+                return
             }
         })
+        
+        
     }
     
     /*
