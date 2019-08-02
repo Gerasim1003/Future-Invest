@@ -14,6 +14,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordLabel: TextField!
     @IBOutlet weak var confirmPasswordLabel: TextField!
     
+    let queryService = QueryService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,7 +59,27 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+        emailLabel.updateBorderColor()
+        passwordLabel.updateBorderColor()
+        confirmPasswordLabel.updateBorderColor()
+        guard !emailLabel.text!.isEmpty && !passwordLabel.text!.isEmpty && confirmPasswordLabel.text!.isEmpty else { return }
+        
+        
+        queryService.postRequest(email: emailLabel.text!, password: passwordLabel.text!, method: .register, completion: { response in
+            switch response.statusCode {
+            case 200:
+                let alertController = UIAlertController(title: "Registration completed successfully", message: nil, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                    //TODO: back to login page
+                }))
+                self.present(alertController, animated: true, completion: nil)
+            default:
+                print("status code: \(response.statusCode)")
+            }
+        })
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -68,4 +90,18 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     */
 
+}
+
+extension UITextField {
+    func updateBorderColor() {
+        if self.text!.isEmpty {
+            self.layer.borderColor = UIColor.red.cgColor
+//            self.layer.borderWidth = 0.5
+//            self.layer.cornerRadius = 5
+        } else {
+            self.layer.borderWidth = 0
+        }
+        
+    }
+    
 }

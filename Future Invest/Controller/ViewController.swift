@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
+    
+    let queryService = QueryService()
 
     @IBOutlet weak var emailTextField: TextField!
     @IBOutlet weak var passwordTextField: TextField!
@@ -53,6 +55,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
+        guard !emailTextField.text!.isEmpty,
+            !passwordTextField.text!.isEmpty else { return }
+        
+        queryService.postRequest(email: emailTextField.text!, password: passwordTextField.text!, method: .login, completion: { response in
+            
+            switch response.statusCode {
+            case 200:
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "collection") as? SignUpViewController else { return }
+                let navVC = UINavigationController(rootViewController: vc)
+                self.present(navVC, animated: true, completion: nil)
+            default:
+                print("status code: \(response.statusCode)")
+            }
+            
+        })
         
     }
     

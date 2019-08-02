@@ -2,4 +2,54 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Future Invest/Controller/ViewController.swift"
+            timestampString = "586401283.6108"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Future_Invest.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Future Invest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gerasim1003/Desktop/Future%20Invest/Future%20Invest/Controller/ViewController.swift"
+                  timestampString = "586386692.729373"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1601">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSURLResponse) -&gt; () in Future_Invest.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Future Invest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gerasim1003/Desktop/Future%20Invest/Future%20Invest/Controller/ViewController.swift"
+                  timestampString = "586386692.732216"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

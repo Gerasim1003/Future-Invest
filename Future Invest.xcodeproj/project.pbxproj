@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050DA42C22F3B13C00B89227 /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050DA42B22F3B13C00B89227 /* QueryService.swift */; };
 		05E7A5A222F1700200941573 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5A122F1700200941573 /* AppDelegate.swift */; };
 		05E7A5A422F1700200941573 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5A322F1700200941573 /* ViewController.swift */; };
 		05E7A5A722F1700200941573 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E7A5A522F1700200941573 /* Main.storyboard */; };
@@ -21,9 +22,15 @@
 		05E7A5C522F2C80F00941573 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5C422F2C80F00941573 /* SignUpViewController.swift */; };
 		05E7A5C722F2CDFC00941573 /* SetGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5C622F2CDFC00941573 /* SetGoalViewController.swift */; };
 		05E7A5C922F2D2F400941573 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5C822F2D2F400941573 /* ResultViewController.swift */; };
+		05E7A5CC22F3316800941573 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5CB22F3316800941573 /* ContainerViewController.swift */; };
+		05E7A5D322F331A900941573 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5D122F331A900941573 /* MenuViewController.swift */; };
+		05E7A5D422F331A900941573 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E7A5D222F331A900941573 /* MenuViewController.xib */; };
+		05E7A5D722F3327B00941573 /* ResaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5D522F3327B00941573 /* ResaultViewController.swift */; };
+		05E7A5D822F3327B00941573 /* ResaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E7A5D622F3327B00941573 /* ResaultViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050DA42B22F3B13C00B89227 /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
 		05E7A59E22F1700200941573 /* Future Invest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Future Invest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E7A5A122F1700200941573 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05E7A5A322F1700200941573 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +47,11 @@
 		05E7A5C422F2C80F00941573 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		05E7A5C622F2CDFC00941573 /* SetGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalViewController.swift; sourceTree = "<group>"; };
 		05E7A5C822F2D2F400941573 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		05E7A5CB22F3316800941573 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		05E7A5D122F331A900941573 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		05E7A5D222F331A900941573 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		05E7A5D522F3327B00941573 /* ResaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResaultViewController.swift; sourceTree = "<group>"; };
+		05E7A5D622F3327B00941573 /* ResaultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResaultViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		056F3DFC22F38852005F2C69 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				050DA42B22F3B13C00B89227 /* QueryService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		05E7A59522F1700200941573 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +92,7 @@
 		05E7A5A022F1700200941573 /* Future Invest */ = {
 			isa = PBXGroup;
 			children = (
+				056F3DFC22F38852005F2C69 /* Networking */,
 				05E7A5B322F1734E00941573 /* Model */,
 				05E7A5B422F1735D00941573 /* View */,
 				05E7A5B522F1736400941573 /* Controller */,
@@ -111,6 +132,11 @@
 				05E7A5BE22F1B1B800941573 /* GoalsViewController.swift */,
 				05E7A5C622F2CDFC00941573 /* SetGoalViewController.swift */,
 				05E7A5C822F2D2F400941573 /* ResultViewController.swift */,
+				05E7A5CB22F3316800941573 /* ContainerViewController.swift */,
+				05E7A5D122F331A900941573 /* MenuViewController.swift */,
+				05E7A5D222F331A900941573 /* MenuViewController.xib */,
+				05E7A5D522F3327B00941573 /* ResaultViewController.swift */,
+				05E7A5D622F3327B00941573 /* ResaultViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,6 +202,8 @@
 				05E7A5AC22F1700600941573 /* LaunchScreen.storyboard in Resources */,
 				05E7A5A922F1700600941573 /* Assets.xcassets in Resources */,
 				05E7A5A722F1700200941573 /* Main.storyboard in Resources */,
+				05E7A5D422F331A900941573 /* MenuViewController.xib in Resources */,
+				05E7A5D822F3327B00941573 /* ResaultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,15 +215,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				05E7A5C722F2CDFC00941573 /* SetGoalViewController.swift in Sources */,
+				05E7A5D722F3327B00941573 /* ResaultViewController.swift in Sources */,
 				05E7A5C322F20EFF00941573 /* View.swift in Sources */,
 				05E7A5BF22F1B1B800941573 /* GoalsViewController.swift in Sources */,
 				05E7A5B922F1956700941573 /* AddCardViewController.swift in Sources */,
 				05E7A5BD22F1B19E00941573 /* GoalsCollectionViewCell.swift in Sources */,
 				05E7A5B722F173B500941573 /* TextField.swift in Sources */,
+				050DA42C22F3B13C00B89227 /* QueryService.swift in Sources */,
 				05E7A5A422F1700200941573 /* ViewController.swift in Sources */,
+				05E7A5D322F331A900941573 /* MenuViewController.swift in Sources */,
 				05E7A5C522F2C80F00941573 /* SignUpViewController.swift in Sources */,
 				05E7A5BB22F1B07000941573 /* Goal.swift in Sources */,
 				05E7A5A222F1700200941573 /* AppDelegate.swift in Sources */,
+				05E7A5CC22F3316800941573 /* ContainerViewController.swift in Sources */,
 				05E7A5C922F2D2F400941573 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

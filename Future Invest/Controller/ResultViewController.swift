@@ -38,6 +38,10 @@ class ResultViewController: UIViewController {
     }
     */
 
+    @IBAction func menuButtonTapped(_ sender: UIButton) {
+        
+    }
+    
 }
 
 extension UIView {
