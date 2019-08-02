@@ -11,10 +11,26 @@ import UIKit
 class SetGoalViewController: UIViewController {
 
     @IBOutlet weak var investInGoalSlider: UISlider!
+    @IBOutlet var bancViews: [UIView]!
+    @IBOutlet weak var dropDownMenuView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var handleImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+//        dropDownMenuView.roundCorners(corners: [.topLeft, .topRight], radius: 10)
+//        dropDownMenuView.clipsToBounds = true
+        dropDownMenuView.layer.cornerRadius = 10
+//        dropDownMenuView.clipsToBounds = false
+        dropDownMenuView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        dropDownMenuView.layer.shadowColor = UIColor.black.cgColor
+        dropDownMenuView.layer.shadowRadius = 1
+        dropDownMenuView.layer.shadowOpacity = 0.3
+        dropDownMenuView.layer.masksToBounds = true
+        dropDownMenuView.clipsToBounds = false
+        
     }
     
 
@@ -27,5 +43,19 @@ class SetGoalViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func hendleTapped(_ sender: UIButton) {
+        bancViews.forEach { (view) in
+            UIView.animate(withDuration: 0.3, animations: {
+                view.isHidden.toggle()
+                view.layer.opacity = view.isHidden ? 0 : 1
+                self.handleImage.image = view.isHidden ? UIImage(named: "Layer 154-2") : UIImage(named: "Layer 154")
+            })
+        
+        }
+    }
+    
+    @IBAction func bankSelected(_ sender: UIButton) {
+        
+    }
+    
 }
