@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		050DA42C22F3B13C00B89227 /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050DA42B22F3B13C00B89227 /* QueryService.swift */; };
+		05D2016E22F460E6007BD577 /* BanksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2016D22F460E6007BD577 /* BanksTableViewController.swift */; };
+		05D2017022F4661C007BD577 /* GoalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2016F22F4661C007BD577 /* GoalsTableViewController.swift */; };
+		05D2017222F468F3007BD577 /* GoalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2017122F468F3007BD577 /* GoalsTableViewCell.swift */; };
 		05E7A5A222F1700200941573 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5A122F1700200941573 /* AppDelegate.swift */; };
 		05E7A5A422F1700200941573 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5A322F1700200941573 /* ViewController.swift */; };
 		05E7A5A722F1700200941573 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E7A5A522F1700200941573 /* Main.storyboard */; };
@@ -27,10 +30,14 @@
 		05E7A5D422F331A900941573 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E7A5D222F331A900941573 /* MenuViewController.xib */; };
 		05E7A5D722F3327B00941573 /* ResaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5D522F3327B00941573 /* ResaultViewController.swift */; };
 		05E7A5D822F3327B00941573 /* ResaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E7A5D622F3327B00941573 /* ResaultViewController.xib */; };
+		738CF0DDD22525E58DE258FE /* Pods_Future_Invest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6A75DBC60EF0666617A5B3 /* Pods_Future_Invest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		050DA42B22F3B13C00B89227 /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
+		05D2016D22F460E6007BD577 /* BanksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksTableViewController.swift; sourceTree = "<group>"; };
+		05D2016F22F4661C007BD577 /* GoalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewController.swift; sourceTree = "<group>"; };
+		05D2017122F468F3007BD577 /* GoalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewCell.swift; sourceTree = "<group>"; };
 		05E7A59E22F1700200941573 /* Future Invest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Future Invest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E7A5A122F1700200941573 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05E7A5A322F1700200941573 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +59,9 @@
 		05E7A5D222F331A900941573 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		05E7A5D522F3327B00941573 /* ResaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResaultViewController.swift; sourceTree = "<group>"; };
 		05E7A5D622F3327B00941573 /* ResaultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResaultViewController.xib; sourceTree = "<group>"; };
+		1F51EBE1F10FC9C593DE0AEA /* Pods-Future Invest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Future Invest.release.xcconfig"; path = "Target Support Files/Pods-Future Invest/Pods-Future Invest.release.xcconfig"; sourceTree = "<group>"; };
+		7A6A75DBC60EF0666617A5B3 /* Pods_Future_Invest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Future_Invest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C58B292E737151E3F5226037 /* Pods-Future Invest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Future Invest.debug.xcconfig"; path = "Target Support Files/Pods-Future Invest/Pods-Future Invest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				738CF0DDD22525E58DE258FE /* Pods_Future_Invest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +89,8 @@
 			children = (
 				05E7A5A022F1700200941573 /* Future Invest */,
 				05E7A59F22F1700200941573 /* Products */,
+				A7C5483BB0149B3798983FEF /* Pods */,
+				CE3E73A18169C6702C48187D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +132,7 @@
 				05E7A5B622F173B500941573 /* TextField.swift */,
 				05E7A5BC22F1B19E00941573 /* GoalsCollectionViewCell.swift */,
 				05E7A5C222F20EFF00941573 /* View.swift */,
+				05D2017122F468F3007BD577 /* GoalsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,8 +151,27 @@
 				05E7A5D222F331A900941573 /* MenuViewController.xib */,
 				05E7A5D522F3327B00941573 /* ResaultViewController.swift */,
 				05E7A5D622F3327B00941573 /* ResaultViewController.xib */,
+				05D2016D22F460E6007BD577 /* BanksTableViewController.swift */,
+				05D2016F22F4661C007BD577 /* GoalsTableViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A7C5483BB0149B3798983FEF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C58B292E737151E3F5226037 /* Pods-Future Invest.debug.xcconfig */,
+				1F51EBE1F10FC9C593DE0AEA /* Pods-Future Invest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE3E73A18169C6702C48187D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A6A75DBC60EF0666617A5B3 /* Pods_Future_Invest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05E7A5B022F1700600941573 /* Build configuration list for PBXNativeTarget "Future Invest" */;
 			buildPhases = (
+				B12152AD251487E4B6D5E48B /* [CP] Check Pods Manifest.lock */,
 				05E7A59A22F1700200941573 /* Sources */,
 				05E7A59B22F1700200941573 /* Frameworks */,
 				05E7A59C22F1700200941573 /* Resources */,
+				040D12318CE96757AB38F126 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,6 +244,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		040D12318CE96757AB38F126 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Future Invest/Pods-Future Invest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Future Invest/Pods-Future Invest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Future Invest/Pods-Future Invest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B12152AD251487E4B6D5E48B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Future Invest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		05E7A59A22F1700200941573 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -224,11 +301,14 @@
 				050DA42C22F3B13C00B89227 /* QueryService.swift in Sources */,
 				05E7A5A422F1700200941573 /* ViewController.swift in Sources */,
 				05E7A5D322F331A900941573 /* MenuViewController.swift in Sources */,
+				05D2017022F4661C007BD577 /* GoalsTableViewController.swift in Sources */,
 				05E7A5C522F2C80F00941573 /* SignUpViewController.swift in Sources */,
+				05D2017222F468F3007BD577 /* GoalsTableViewCell.swift in Sources */,
 				05E7A5BB22F1B07000941573 /* Goal.swift in Sources */,
 				05E7A5A222F1700200941573 /* AppDelegate.swift in Sources */,
 				05E7A5CC22F3316800941573 /* ContainerViewController.swift in Sources */,
 				05E7A5C922F2D2F400941573 /* ResultViewController.swift in Sources */,
+				05D2016E22F460E6007BD577 /* BanksTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +452,7 @@
 		};
 		05E7A5B122F1700600941573 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C58B292E737151E3F5226037 /* Pods-Future Invest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -391,6 +472,7 @@
 		};
 		05E7A5B222F1700600941573 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F51EBE1F10FC9C593DE0AEA /* Pods-Future Invest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

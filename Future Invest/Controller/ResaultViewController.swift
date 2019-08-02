@@ -6,6 +6,7 @@
 //  Copyright © 2019 Gerasim Israyelyan. All rights reserved.
 //
 
+import Charts
 import UIKit
 
 protocol ResaultViewControllerDelegate {
@@ -15,6 +16,7 @@ protocol ResaultViewControllerDelegate {
 class ResaultViewController: UIViewController {
 
     var delegate: ResaultViewControllerDelegate?
+    @IBOutlet weak var chtChart: LineChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,31 @@ class ResaultViewController: UIViewController {
         //            view.layer.shadowOpacity = 0.5
         //
         //        }
+        
+        updateChart()
+        
+    }
+    
+    func updateChart() {
+        var lineChartEntry = [ChartDataEntry]()
+        
+        for i in 0..<5 {
+            let value = ChartDataEntry(x: Double(i), y: Double(i + 10))
+            lineChartEntry.append(value)
+        }
+        
+        let line1 = LineChartDataSet(entries: lineChartEntry, label: "Number")
+        
+        line1.colors = [NSUIColor.blue]
+        
+        let data = LineChartData()
+        
+        data.addDataSet(line1)
+        
+        chtChart.data = data
+        
+        chtChart.chartDescription?.text = "wfccf"
+
     }
     
     

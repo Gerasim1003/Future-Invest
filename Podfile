@@ -6,5 +6,6 @@ target 'Future Invest' do
   use_frameworks!
 
   # Pods for Future Invest
+pod 'Charts'
 
 end
