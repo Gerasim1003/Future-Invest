@@ -1,15 +1,14 @@
 //
-//  Goal.swift
+//  Bank.swift
 //  Future Invest
 //
-//  Created by Gerasim Israyelyan on 7/31/19.
+//  Created by Gerasim Israyelyan on 8/2/19.
 //  Copyright © 2019 Gerasim Israyelyan. All rights reserved.
 //
 
 import UIKit
 
-struct Goal {
+struct Bank {
     let image: UIImage
     let name: String
-    let percent: Double?
 }

@@ -62,49 +62,41 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         passwordLabel.updateBorderColor()
         confirmPasswordLabel.updateBorderColor()
         
-        guard !emailLabel.text!.isEmpty && !passwordLabel.text!.isEmpty && !confirmPasswordLabel.text!.isEmpty else { return }
+        self.performSegue(withIdentifier: "signUp", sender: nil)
+
         
-        if confirmPasswordLabel.text != passwordLabel.text {
-            let alertController = UIAlertController(title: "Password and confirm password does not match", message: nil, preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
-            self.present(alertController, animated: true, completion: nil)
-            return
-        }
         
-        queryService.postRequest(email: emailLabel.text!, password: passwordLabel.text!, method: .register, completion: { response in
-            if (200..<300).contains(response.response!.statusCode) {
-                self.performSegue(withIdentifier: "signUp", sender: nil)
-            } else if response.response!.statusCode == 400 {
-                let alertController = UIAlertController(title: "This email already exists", message: nil, preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
-                self.present(alertController, animated: true, completion: nil)
-                return
-            }
-        })
-        
+//        guard !emailLabel.text!.isEmpty && !passwordLabel.text!.isEmpty && !confirmPasswordLabel.text!.isEmpty else { return }
+//
+//        if confirmPasswordLabel.text != passwordLabel.text {
+//            let alertController = UIAlertController(title: "Password and confirm password does not match", message: nil, preferredStyle: .alert)
+//            alertController.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
+//            self.present(alertController, animated: true, completion: nil)
+//            return
+//        }
+//
+//        queryService.postRequest(email: emailLabel.text!, password: passwordLabel.text!, method: .register, completion: { response in
+//            if (200..<300).contains(response.response!.statusCode) {
+//                self.performSegue(withIdentifier: "signUp", sender: nil)
+//            } else if response.response!.statusCode == 400 {
+//                let alertController = UIAlertController(title: "This email already exists", message: nil, preferredStyle: .alert)
+//                alertController.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
+//                self.present(alertController, animated: true, completion: nil)
+//                return
+//            }
+//        })
+//
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension UITextField {
     func updateBorderColor() {
         if self.text!.isEmpty {
             self.layer.borderColor = UIColor.red.cgColor
-//            self.layer.borderWidth = 0.5
-//            self.layer.cornerRadius = 5
         } else {
-            self.layer.borderWidth = 0
+            self.layer.borderColor = #colorLiteral(red: 0.4037267566, green: 0.8625342846, blue: 0.2921340466, alpha: 1)
         }
         
     }

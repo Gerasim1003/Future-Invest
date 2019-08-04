@@ -9,12 +9,18 @@
 import UIKit
 
 class SetGoalViewController: UIViewController {
+    
+    var goal: Goal?
 
-    @IBOutlet weak var investInGoalSlider: UISlider!
+    @IBOutlet weak var slider: UISlider!
     @IBOutlet var bancViews: [UIView]!
     @IBOutlet weak var dropDownMenuView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var handleImage: UIImageView!
+    @IBOutlet weak var investInGoal: UILabel!
+    @IBOutlet weak var banksView: UIButton!
+    @IBOutlet weak var banksviewButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +37,7 @@ class SetGoalViewController: UIViewController {
         dropDownMenuView.layer.masksToBounds = true
         dropDownMenuView.clipsToBounds = false
         
+                
     }
     
 
@@ -56,6 +63,23 @@ class SetGoalViewController: UIViewController {
     
     @IBAction func bankSelected(_ sender: UIButton) {
         
+    }
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        
+        let val = round(sender.value / 5) * 5
+        investInGoal.text = "$ \(Int(val))"
+    }
+    @IBAction func switchValueChanged(_ sender: UISwitch) {
+        banksviewButton.isEnabled = sender.isOn
+        
+        bancViews.forEach { (view) in
+            UIView.animate(withDuration: 0.3, animations: {
+                view.isHidden = !sender.isOn
+                view.layer.opacity = view.isHidden ? 0 : 1
+                self.handleImage.image = view.isHidden ? UIImage(named: "Layer 154-2") : UIImage(named: "Layer 154")
+            })
+            
+        }
     }
     
 }

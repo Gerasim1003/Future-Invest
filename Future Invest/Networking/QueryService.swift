@@ -19,45 +19,38 @@ class QueryService {
     
     func postRequest(email: String, password: String, method: Method, completion: @escaping (DataResponse<Any>) -> ()) {
         
-        let baseUrl: URL!
-        
-        switch method {
-        case .login:
-            baseUrl = URL(string: loginUrl)
-        case .register:
-            baseUrl = URL(string: registerUrl)
-        }
-        
         let params: [String: Any] = [
             "email": email,
-            "password": password
+            "password": password,
         ]
         
-        AF.request(baseUrl, method: .post, parameters: params).validate().responseJSON { responseJSON in
-            completion(responseJSON)
-//            switch responseJSON.result {
-//            case .success(let value):
-//                guard
-//                    let jsonObject = value as? [String: Any]
-//                    else { return }
-//                print(jsonObject)
-//                completion(jsonObject)
-//                
-//            case .failure(let error):
-//                print(error)
-//            }
+        AF.request("http://192.168.43.221:5000/login", method: .post, parameters: params).validate().responseJSON { responseJSON in
+            
+            switch responseJSON.result {
+            case .success(let _):
+                print(responseJSON)
+                completion(responseJSON)
+            case .failure(let error):
+                print(error)
+            }
         }
-    
     }
+    
+    func getRequest(token: String, query: String,  completion: @escaping (Any) -> ()) {
+        var url = "http://192.168.43.221:5000/\(query)"
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjQ4MDkxNTcsIm5iZiI6MTU2NDgwOTE1NywianRpIjoiNDY4OWZhZjAtYzdhMS00NjkxLWFmMGItZjFkOWU3N2M4NWQwIiwiZXhwIjoxNTk2MzQ1MTU3LCJpZGVudGl0eSI6MSwiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.Sdai3MeIDbUl-7KgBcWuajujKAe2_dJycGMfOR0CvIg",
+            "Accept": "application/json"
+        ]
+        
+        AF.request(url, headers: headers).responseJSON { response in
+            switch response.result {
+            case .success(let json):
+                completion(json)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
 }
-//
-//extension URL {
-//    func withQueries(_ query: [String: String]) -> URL? {
-//        var components = URLComponents(url: self, resolvingAgainstBaseURL: true)
-//        components?.queryItems = query.map {
-//            URLQueryItem(name: $0.0, value: $0.1)
-//        }
-//
-//        return components?.url
-//    }
-//}

@@ -45,7 +45,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="W1I-Ur-IeL">
-                            <rect key="frame" x="50" y="378.66666666666669" width="174" height="244.00000000000006"/>
+                            <rect key="frame" x="50" y="358.66666666666674" width="174" height="310"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwS-XF-xPP">
                                     <rect key="frame" x="0.0" y="0.0" width="174" height="46"/>
@@ -53,23 +53,37 @@
                                     <state key="normal" title="My goals">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="myGoalsTapped:" destination="-1" eventType="touchUpInside" id="6n2-Kk-zdJ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40u-f1-fPn">
+                                    <rect key="frame" x="0.0" y="66" width="174" height="46"/>
+                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
+                                    <state key="normal" title="Saving up">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="myGoalsTapped:" destination="-1" eventType="touchUpInside" id="mvx-PH-TXG"/>
+                                        <action selector="savingUpTapped:" destination="-1" eventType="touchUpInside" id="cvN-Ew-hnR"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82W-o8-bgb">
-                                    <rect key="frame" x="0.0" y="66" width="174" height="46"/>
+                                    <rect key="frame" x="0.0" y="132" width="174" height="46"/>
                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
                                     <state key="normal" title="Support">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mme-P9-cv4">
-                                    <rect key="frame" x="0.0" y="131.99999999999994" width="174" height="46"/>
+                                    <rect key="frame" x="0.0" y="197.99999999999994" width="174" height="46"/>
                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
                                     <state key="normal" title="Settings">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2B-J7-wZ7">
-                                    <rect key="frame" x="0.0" y="197.99999999999994" width="174" height="46"/>
+                                    <rect key="frame" x="0.0" y="263.99999999999994" width="174" height="46"/>
                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
                                     <state key="normal" title="Logout">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,7 +101,7 @@
                         <constraint firstAttribute="trailing" secondItem="W1I-Ur-IeL" secondAttribute="trailing" constant="50" id="kyI-FN-Wla"/>
                         <constraint firstItem="NXZ-cT-kum" firstAttribute="centerX" secondItem="Y1u-ap-b4p" secondAttribute="centerX" id="mMl-Ec-c9B"/>
                         <constraint firstItem="VdK-Ke-cAl" firstAttribute="top" secondItem="NXZ-cT-kum" secondAttribute="bottom" constant="8" id="mgh-q6-Ywa"/>
-                        <constraint firstItem="W1I-Ur-IeL" firstAttribute="top" secondItem="VdK-Ke-cAl" secondAttribute="bottom" constant="70" id="wZV-Vc-2cZ"/>
+                        <constraint firstItem="W1I-Ur-IeL" firstAttribute="top" secondItem="VdK-Ke-cAl" secondAttribute="bottom" constant="50" id="wZV-Vc-2cZ"/>
                         <constraint firstAttribute="trailing" secondItem="NCX-Do-fSd" secondAttribute="trailing" constant="50" id="wjf-Se-OA7"/>
                         <constraint firstItem="NCX-Do-fSd" firstAttribute="leading" secondItem="Y1u-ap-b4p" secondAttribute="leading" constant="50" id="y30-Jk-K5H"/>
                     </constraints>

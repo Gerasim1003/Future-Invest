@@ -1,38 +1,31 @@
 //
-//  MenuViewController.swift
+//  SavingUpViewController.swift
 //  Future Invest
 //
-//  Created by Gerasim Israyelyan on 8/1/19.
+//  Created by Gerasim Israyelyan on 8/3/19.
 //  Copyright © 2019 Gerasim Israyelyan. All rights reserved.
 //
 
 import UIKit
 
-protocol MenuViewControllerDelegate {
-    func configureGoalsVC()
-    func configureSavingUpVC()
-    func configureResaultVC()
-}
+class SavingUpViewController: UIViewController {
+    @IBOutlet weak var transportLabel: UILabel!
+    @IBOutlet weak var shoppingLabel: UILabel!
+    
+    var saving = Savings(meals: "-20%", Transportation: "-40%")
+    
+    var delegate: ResaultViewControllerDelegate?
 
-class MenuViewController: UIViewController {
-    
-    var delegate: MenuViewControllerDelegate?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        transportLabel.text = saving.Transportation
+        shoppingLabel.text = saving.meals
     }
     
-    
-    @IBAction func myGoalsTapped(_ sender: Any) {
-        delegate?.configureGoalsVC()
-    }
-    
-    @IBAction func savingUpTapped(_ sender: Any) {
-        delegate?.configureSavingUpVC()
-    }
-    
+
     /*
     // MARK: - Navigation
 
@@ -42,5 +35,8 @@ class MenuViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func menuTapped(_ sender: Any) {
+        delegate?.toggleMenu()
+    }
+    
 }

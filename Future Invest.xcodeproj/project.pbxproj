@@ -11,6 +11,11 @@
 		05D2016E22F460E6007BD577 /* BanksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2016D22F460E6007BD577 /* BanksTableViewController.swift */; };
 		05D2017022F4661C007BD577 /* GoalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2016F22F4661C007BD577 /* GoalsTableViewController.swift */; };
 		05D2017222F468F3007BD577 /* GoalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2017122F468F3007BD577 /* GoalsTableViewCell.swift */; };
+		05D2017422F4BAE5007BD577 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2017322F4BAE5007BD577 /* Bank.swift */; };
+		05D2017622F4BBA5007BD577 /* BankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2017522F4BBA5007BD577 /* BankTableViewCell.swift */; };
+		05D2017822F4C20A007BD577 /* BankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2017722F4C20A007BD577 /* BankViewController.swift */; };
+		05D2017A22F4EFB6007BD577 /* SavingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2017922F4EFB6007BD577 /* SavingUpViewController.swift */; };
+		05D2017C22F55351007BD577 /* Savings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2017B22F55351007BD577 /* Savings.swift */; };
 		05E7A5A222F1700200941573 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5A122F1700200941573 /* AppDelegate.swift */; };
 		05E7A5A422F1700200941573 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5A322F1700200941573 /* ViewController.swift */; };
 		05E7A5A722F1700200941573 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E7A5A522F1700200941573 /* Main.storyboard */; };
@@ -24,7 +29,6 @@
 		05E7A5C322F20EFF00941573 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5C222F20EFF00941573 /* View.swift */; };
 		05E7A5C522F2C80F00941573 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5C422F2C80F00941573 /* SignUpViewController.swift */; };
 		05E7A5C722F2CDFC00941573 /* SetGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5C622F2CDFC00941573 /* SetGoalViewController.swift */; };
-		05E7A5C922F2D2F400941573 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5C822F2D2F400941573 /* ResultViewController.swift */; };
 		05E7A5CC22F3316800941573 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5CB22F3316800941573 /* ContainerViewController.swift */; };
 		05E7A5D322F331A900941573 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7A5D122F331A900941573 /* MenuViewController.swift */; };
 		05E7A5D422F331A900941573 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E7A5D222F331A900941573 /* MenuViewController.xib */; };
@@ -38,6 +42,11 @@
 		05D2016D22F460E6007BD577 /* BanksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksTableViewController.swift; sourceTree = "<group>"; };
 		05D2016F22F4661C007BD577 /* GoalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewController.swift; sourceTree = "<group>"; };
 		05D2017122F468F3007BD577 /* GoalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewCell.swift; sourceTree = "<group>"; };
+		05D2017322F4BAE5007BD577 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		05D2017522F4BBA5007BD577 /* BankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTableViewCell.swift; sourceTree = "<group>"; };
+		05D2017722F4C20A007BD577 /* BankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankViewController.swift; sourceTree = "<group>"; };
+		05D2017922F4EFB6007BD577 /* SavingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingUpViewController.swift; sourceTree = "<group>"; };
+		05D2017B22F55351007BD577 /* Savings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Savings.swift; sourceTree = "<group>"; };
 		05E7A59E22F1700200941573 /* Future Invest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Future Invest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E7A5A122F1700200941573 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05E7A5A322F1700200941573 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +62,6 @@
 		05E7A5C222F20EFF00941573 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		05E7A5C422F2C80F00941573 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		05E7A5C622F2CDFC00941573 /* SetGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalViewController.swift; sourceTree = "<group>"; };
-		05E7A5C822F2D2F400941573 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		05E7A5CB22F3316800941573 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		05E7A5D122F331A900941573 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		05E7A5D222F331A900941573 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -122,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				05E7A5BA22F1B07000941573 /* Goal.swift */,
+				05D2017322F4BAE5007BD577 /* Bank.swift */,
+				05D2017B22F55351007BD577 /* Savings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +143,7 @@
 				05E7A5BC22F1B19E00941573 /* GoalsCollectionViewCell.swift */,
 				05E7A5C222F20EFF00941573 /* View.swift */,
 				05D2017122F468F3007BD577 /* GoalsTableViewCell.swift */,
+				05D2017522F4BBA5007BD577 /* BankTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,17 +153,18 @@
 			children = (
 				05E7A5A322F1700200941573 /* ViewController.swift */,
 				05E7A5C422F2C80F00941573 /* SignUpViewController.swift */,
+				05E7A5CB22F3316800941573 /* ContainerViewController.swift */,
+				05D2016D22F460E6007BD577 /* BanksTableViewController.swift */,
+				05D2017722F4C20A007BD577 /* BankViewController.swift */,
 				05E7A5B822F1956700941573 /* AddCardViewController.swift */,
 				05E7A5BE22F1B1B800941573 /* GoalsViewController.swift */,
 				05E7A5C622F2CDFC00941573 /* SetGoalViewController.swift */,
-				05E7A5C822F2D2F400941573 /* ResultViewController.swift */,
-				05E7A5CB22F3316800941573 /* ContainerViewController.swift */,
-				05E7A5D122F331A900941573 /* MenuViewController.swift */,
 				05E7A5D222F331A900941573 /* MenuViewController.xib */,
-				05E7A5D522F3327B00941573 /* ResaultViewController.swift */,
+				05E7A5D122F331A900941573 /* MenuViewController.swift */,
 				05E7A5D622F3327B00941573 /* ResaultViewController.xib */,
-				05D2016D22F460E6007BD577 /* BanksTableViewController.swift */,
+				05E7A5D522F3327B00941573 /* ResaultViewController.swift */,
 				05D2016F22F4661C007BD577 /* GoalsTableViewController.swift */,
+				05D2017922F4EFB6007BD577 /* SavingUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -297,6 +309,7 @@
 				05E7A5BF22F1B1B800941573 /* GoalsViewController.swift in Sources */,
 				05E7A5B922F1956700941573 /* AddCardViewController.swift in Sources */,
 				05E7A5BD22F1B19E00941573 /* GoalsCollectionViewCell.swift in Sources */,
+				05D2017A22F4EFB6007BD577 /* SavingUpViewController.swift in Sources */,
 				05E7A5B722F173B500941573 /* TextField.swift in Sources */,
 				050DA42C22F3B13C00B89227 /* QueryService.swift in Sources */,
 				05E7A5A422F1700200941573 /* ViewController.swift in Sources */,
@@ -304,10 +317,13 @@
 				05D2017022F4661C007BD577 /* GoalsTableViewController.swift in Sources */,
 				05E7A5C522F2C80F00941573 /* SignUpViewController.swift in Sources */,
 				05D2017222F468F3007BD577 /* GoalsTableViewCell.swift in Sources */,
+				05D2017622F4BBA5007BD577 /* BankTableViewCell.swift in Sources */,
 				05E7A5BB22F1B07000941573 /* Goal.swift in Sources */,
 				05E7A5A222F1700200941573 /* AppDelegate.swift in Sources */,
+				05D2017422F4BAE5007BD577 /* Bank.swift in Sources */,
 				05E7A5CC22F3316800941573 /* ContainerViewController.swift in Sources */,
-				05E7A5C922F2D2F400941573 /* ResultViewController.swift in Sources */,
+				05D2017C22F55351007BD577 /* Savings.swift in Sources */,
+				05D2017822F4C20A007BD577 /* BankViewController.swift in Sources */,
 				05D2016E22F460E6007BD577 /* BanksTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

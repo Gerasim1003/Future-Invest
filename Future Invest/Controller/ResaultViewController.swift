@@ -16,21 +16,12 @@ protocol ResaultViewControllerDelegate {
 class ResaultViewController: UIViewController {
 
     var delegate: ResaultViewControllerDelegate?
+    
     @IBOutlet weak var chtChart: LineChartView!
+    var goal: Goal?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        //        stackView.subviews.forEach { (view) in
-        //            view.roundCorners(corners: [.topLeft, .topRight], radius: 10)
-        //            view.layer.shadowOffset = CGSize(width: 40, height: -1)
-        //            view.layer.shadowColor = UIColor.black.cgColor
-        //            view.layer.masksToBounds = false
-        //            view.layer.shadowRadius = 10
-        //            view.layer.shadowOpacity = 0.5
-        //
-        //        }
         
         updateChart()
         
@@ -46,15 +37,14 @@ class ResaultViewController: UIViewController {
         
         let line1 = LineChartDataSet(entries: lineChartEntry, label: "Number")
         
-        line1.colors = [NSUIColor.blue]
+        line1.colors = [NSUIColor.green]
+        line1.circleColors = [NSUIColor.orange]
         
         let data = LineChartData()
         
         data.addDataSet(line1)
         
         chtChart.data = data
-        
-        chtChart.chartDescription?.text = "wfccf"
 
     }
     

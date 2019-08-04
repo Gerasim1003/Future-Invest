@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
@@ -47,6 +48,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
         case 1:
             textField.resignFirstResponder()
+
         default:
             break
         }
@@ -55,15 +57,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        guard !emailTextField.text!.isEmpty,
-            !passwordTextField.text!.isEmpty else { return }
-        
-        queryService.postRequest(email: emailTextField.text!, password: passwordTextField.text!, method: .login, completion: { response in
-            
-                print(response)
-            
-        })
-        
+        self.performSegue(withIdentifier: "llogin", sender: nil)
+
+//        emailTextField.updateBorderColor()
+//        passwordTextField.updateBorderColor()
+//        guard !emailTextField.text!.isEmpty,
+//            !passwordTextField.text!.isEmpty else { return }
+//
+//        queryService.postRequest(email: emailTextField.text!, password: passwordTextField.text!, method: .login, completion: { response in
+//
+//            if (200..<300).contains(response.response!.statusCode) {
+//                self.performSegue(withIdentifier: "llogin", sender: nil)
+//            } else if (400..<500).contains(response.response!.statusCode) {
+//                let alertController = UIAlertController(title: "Account does not exist", message: nil, preferredStyle: .alert)
+//                alertController.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
+//                self.present(alertController, animated: true, completion: nil)
+//                return
+//            }
+//
+//        })
+
     }
     
 }

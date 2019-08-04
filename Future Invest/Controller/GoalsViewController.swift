@@ -8,23 +8,24 @@
 
 import UIKit
 
-class GoalsViewController: UIViewController, UICollectionViewDataSource {
+class GoalsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     let goals: [Goal] = [
-        Goal(image: UIImage(named: "Asset 5-8")!, name: "Car"),
-        Goal(image: UIImage(named: "Asset 6-8")!, name: "Home"),
-        Goal(image: UIImage(named: "Asset 7-8")!, name: "Phone"),
-        Goal(image: UIImage(named: "Asset 8-8")!, name: "Bicycle"),
-        Goal(image: UIImage(named: "Asset 9-8")!, name: "Bike"),
-        Goal(image: UIImage(named: "+")!, name: "Add your"),
+        Goal(image: UIImage(named: "Asset 5-8")!, name: "Car", percent: nil),
+        Goal(image: UIImage(named: "Asset 6-8")!, name: "Home", percent: nil),
+        Goal(image: UIImage(named: "Asset 7-8")!, name: "Phone", percent: nil),
+        Goal(image: UIImage(named: "Asset 8-8")!, name: "Bicycle", percent: nil),
+        Goal(image: UIImage(named: "Asset 9-8")!, name: "Bike", percent: nil),
+        Goal(image: UIImage(named: "+")!, name: "Add your", percent: nil),
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.dataSource = self
+        collectionView.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -51,4 +52,18 @@ class GoalsViewController: UIViewController, UICollectionViewDataSource {
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "setGoal", sender: goals[indexPath.row])
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "setGoal" {
+            let vc = segue.destination as! SetGoalViewController
+            vc.goal = sender as? Goal
+        }
+    }
+    
 }
